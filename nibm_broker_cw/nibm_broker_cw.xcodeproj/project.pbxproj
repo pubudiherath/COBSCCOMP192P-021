@@ -94,6 +94,12 @@
 		AF227F9F280B29FE0047B31A /* nibm_broker_cw */ = {
 			isa = PBXGroup;
 			children = (
+				AF227FD0280B30A50047B31A /* Utils */,
+				AF227FCF280B30960047B31A /* Services */,
+				AF227FCE280B30860047B31A /* Components */,
+				AF227FCD280B30750047B31A /* Views */,
+				AF227FCB280B305D0047B31A /* ViewModels */,
+				AF227FCA280B30510047B31A /* Models */,
 				AF227FA0280B29FE0047B31A /* nibm_broker_cwApp.swift */,
 				AF227FA2280B29FE0047B31A /* ContentView.swift */,
 				AF227FA4280B2A000047B31A /* Assets.xcassets */,
@@ -125,6 +131,48 @@
 				AF227FBD280B2A000047B31A /* nibm_broker_cwUITestsLaunchTests.swift */,
 			);
 			path = nibm_broker_cwUITests;
+			sourceTree = "<group>";
+		};
+		AF227FCA280B30510047B31A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AF227FCB280B305D0047B31A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AF227FCD280B30750047B31A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AF227FCE280B30860047B31A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		AF227FCF280B30960047B31A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AF227FD0280B30A50047B31A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
