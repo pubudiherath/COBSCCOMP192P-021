@@ -27,6 +27,8 @@
 		AF227FF5280B468B0047B31A /* CustomInputtField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF227FEF280B468A0047B31A /* CustomInputtField.swift */; };
 		AF227FF6280B468B0047B31A /* SelectOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF227FF0280B468A0047B31A /* SelectOptionView.swift */; };
 		AF227FF7280B468B0047B31A /* AddRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF227FF1280B468A0047B31A /* AddRowView.swift */; };
+		AF227FF9280B47600047B31A /* Launch_Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF227FF8280B47600047B31A /* Launch_Screen.storyboard */; };
+		AF227FFB280B497D0047B31A /* home.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF227FFA280B497C0047B31A /* home.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		AF227FEF280B468A0047B31A /* CustomInputtField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomInputtField.swift; sourceTree = "<group>"; };
 		AF227FF0280B468A0047B31A /* SelectOptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectOptionView.swift; sourceTree = "<group>"; };
 		AF227FF1280B468A0047B31A /* AddRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRowView.swift; sourceTree = "<group>"; };
+		AF227FF8280B47600047B31A /* Launch_Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch_Screen.storyboard; sourceTree = "<group>"; };
+		AF227FFA280B497C0047B31A /* home.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = home.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,8 +133,10 @@
 				AF227FA0280B29FE0047B31A /* nibm_broker_cwApp.swift */,
 				AF227FA2280B29FE0047B31A /* ContentView.swift */,
 				AF227FA4280B2A000047B31A /* Assets.xcassets */,
+				AF227FFA280B497C0047B31A /* home.jpg */,
 				AF227FD1280B35210047B31A /* GoogleService-Info.plist */,
 				AF227FA6280B2A000047B31A /* Preview Content */,
+				AF227FF8280B47600047B31A /* Launch_Screen.storyboard */,
 			);
 			path = nibm_broker_cw;
 			sourceTree = "<group>";
@@ -324,6 +330,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF227FA8280B2A000047B31A /* Preview Assets.xcassets in Resources */,
+				AF227FFB280B497D0047B31A /* home.jpg in Resources */,
+				AF227FF9280B47600047B31A /* Launch_Screen.storyboard in Resources */,
 				AF227FA5280B2A000047B31A /* Assets.xcassets in Resources */,
 				AF227FD2280B35210047B31A /* GoogleService-Info.plist in Resources */,
 			);
@@ -525,6 +533,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = Launch_Screen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -553,6 +562,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = Launch_Screen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
