@@ -1,8 +1,8 @@
 //
-//  SellerAddDetailsViewModel.swift
-//  nibm_broker
+//  SellerAddDetailViewModel.swift
+//  nibm_broker_cw
 //
-//  Created by HeshanHH on 4/13/22.
+//  Created by pubudiHerath on 4/17/22.
 //
 
 import Firebase
