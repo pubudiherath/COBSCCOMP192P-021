@@ -1,8 +1,8 @@
 //
-//  ImagePicker.swift
-//  nibm_broker
+//  nibm_broker_cwApp.swift
+//  nibm_broker_cw
 //
-//  Created by HeshanHH on 4/15/22.
+//  Created by pubudiHerath on 4/17/22.
 //
 
 import SwiftUI
@@ -21,9 +21,7 @@ struct ImagePicker : UIViewControllerRepresentable{
         return picker
     }
     
-    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-
-    }
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {}
     
 }
 
@@ -39,6 +37,7 @@ extension ImagePicker{
             guard let image = info[.originalImage] as? UIImage else {return}
             
             parent.selectedImage = image
+            // dismiss the opened view
             parent.presentationMode.wrappedValue.dismiss()
         }
     }

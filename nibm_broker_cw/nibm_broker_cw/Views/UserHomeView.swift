@@ -1,8 +1,8 @@
 //
-//  UserHome.swift
-//  nibm_broker
+//  nibm_broker_cwApp.swift
+//  nibm_broker_cw
 //
-//  Created by HeshanHH on 4/13/22.
+//  Created by pubudiHerath on 4/17/22.
 //
 
 import SwiftUI
@@ -10,6 +10,7 @@ import SwiftUI
 struct UserHomeView: View {
     private var district = ["Colombo","Kurunegala","Kandy","Galle"]
     private var itemType = ["House", "Land"]
+    
     var body: some View {
         VStack{
             HeaderBarView()

@@ -1,8 +1,8 @@
 //
-//  SignInView.swift
-//  nibm_broker
+//  nibm_broker_cwApp.swift
+//  nibm_broker_cw
 //
-//  Created by HeshanHH on 4/13/22.
+//  Created by pubudiHerath on 4/17/22.
 //
 
 import SwiftUI
@@ -46,8 +46,6 @@ struct SignInView: View {
             .foregroundColor(.white)
             
             VStack(spacing : 40){
-                //TextField("Email",text: $email)
-                //TextField("Password",text: $password)
                 CustomInputtField(imageName: "envelope", placeHolderText: "Email", text: $email)
                 
                 CustomInputtField(imageName: "lock", placeHolderText: "Password", isSecureField: true,  text: $password)
@@ -67,7 +65,6 @@ struct SignInView: View {
                         .foregroundColor(Color(.systemBlue))
                         .padding(.top)
                         .padding(.trailing, 24)
-                        //.frame(width: 360, height: 40)
                 }
             }
             Button{
@@ -80,14 +77,14 @@ struct SignInView: View {
                     .background(Color(.systemBlue))
                     .clipShape(Capsule())
                     .padding()
-                    
+                
             }
             .shadow(color: .gray.opacity(0.5), radius:10 , x: 0, y: 0)
+            
             Spacer()
-    
+            
             NavigationLink{
                 SignUpView()
-                    //.navigationBarHidden(true)
             } label: {
                 HStack{
                     Text("Dont hava an account? ")
@@ -95,12 +92,10 @@ struct SignInView: View {
                     Text("Sign Up")
                         .font(.footnote)
                         .fontWeight(.semibold)
-                    
                 }
             }
             .padding(.bottom,50)
             .foregroundColor(Color(.systemBlue))
-           
         }
         .ignoresSafeArea()
         .navigationBarHidden(true)
