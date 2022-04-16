@@ -6,12 +6,25 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct nibm_broker_cwApp: App {
+    
+    init(){
+        // configuer firebase just after app start
+        FirebaseApp.configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            
+            // set root view as view container
+            // every navigation links render inside the navigation-view
+            
+            NavigationView{
+                ContentView()
+            }
         }
     }
 }
