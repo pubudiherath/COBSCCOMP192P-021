@@ -29,6 +29,7 @@
 		AF227FF7280B468B0047B31A /* AddRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF227FF1280B468A0047B31A /* AddRowView.swift */; };
 		AF227FF9280B47600047B31A /* Launch_Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF227FF8280B47600047B31A /* Launch_Screen.storyboard */; };
 		AF227FFB280B497D0047B31A /* home.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF227FFA280B497C0047B31A /* home.jpg */; };
+		AF227FFD280B4CFA0047B31A /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF227FFC280B4CFA0047B31A /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		AF227FF1280B468A0047B31A /* AddRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRowView.swift; sourceTree = "<group>"; };
 		AF227FF8280B47600047B31A /* Launch_Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch_Screen.storyboard; sourceTree = "<group>"; };
 		AF227FFA280B497C0047B31A /* home.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = home.jpg; sourceTree = "<group>"; };
+		AF227FFC280B4CFA0047B31A /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 		AF227FD0280B30A50047B31A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				AF227FFC280B4CFA0047B31A /* ImagePicker.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				AF227FE9280B45950047B31A /* SignInView.swift in Sources */,
 				AF227FA3280B29FE0047B31A /* ContentView.swift in Sources */,
 				AF227FF5280B468B0047B31A /* CustomInputtField.swift in Sources */,
+				AF227FFD280B4CFA0047B31A /* ImagePicker.swift in Sources */,
 				AF227FEB280B45C10047B31A /* SignInViewModel.swift in Sources */,
 				AF227FA1280B29FE0047B31A /* nibm_broker_cwApp.swift in Sources */,
 				AF227FF7280B468B0047B31A /* AddRowView.swift in Sources */,
