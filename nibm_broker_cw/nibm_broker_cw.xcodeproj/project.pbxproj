@@ -36,6 +36,10 @@
 		AF228005280B4F370047B31A /* UserHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF228004280B4F360047B31A /* UserHomeViewModel.swift */; };
 		AF228007280B50570047B31A /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF228006280B50570047B31A /* SignUpView.swift */; };
 		AF228009280B50670047B31A /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF228008280B50670047B31A /* SignUpViewModel.swift */; };
+		AF22800B280B54A30047B31A /* AddDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF22800A280B54A20047B31A /* AddDetailsView.swift */; };
+		AF22800D280B54AF0047B31A /* AddDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF22800C280B54AF0047B31A /* AddDetailsViewModel.swift */; };
+		AF22800F280B55F60047B31A /* SellerAddDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF22800E280B55F60047B31A /* SellerAddDetailsView.swift */; };
+		AF228011280B56000047B31A /* SellerAddDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF228010280B56000047B31A /* SellerAddDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +88,10 @@
 		AF228004280B4F360047B31A /* UserHomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHomeViewModel.swift; sourceTree = "<group>"; };
 		AF228006280B50570047B31A /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		AF228008280B50670047B31A /* SignUpViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		AF22800A280B54A20047B31A /* AddDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDetailsView.swift; sourceTree = "<group>"; };
+		AF22800C280B54AF0047B31A /* AddDetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDetailsViewModel.swift; sourceTree = "<group>"; };
+		AF22800E280B55F60047B31A /* SellerAddDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellerAddDetailsView.swift; sourceTree = "<group>"; };
+		AF228010280B56000047B31A /* SellerAddDetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellerAddDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +198,8 @@
 		AF227FCB280B305D0047B31A /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				AF228010280B56000047B31A /* SellerAddDetailsViewModel.swift */,
+				AF22800C280B54AF0047B31A /* AddDetailsViewModel.swift */,
 				AF228008280B50670047B31A /* SignUpViewModel.swift */,
 				AF228004280B4F360047B31A /* UserHomeViewModel.swift */,
 				AF227FEA280B45C10047B31A /* SignInViewModel.swift */,
@@ -200,6 +210,8 @@
 		AF227FCD280B30750047B31A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AF22800E280B55F60047B31A /* SellerAddDetailsView.swift */,
+				AF22800A280B54A20047B31A /* AddDetailsView.swift */,
 				AF228006280B50570047B31A /* SignUpView.swift */,
 				AF228002280B4F260047B31A /* UserHomeView.swift */,
 				AF227FE8280B45950047B31A /* SignInView.swift */,
@@ -381,11 +393,14 @@
 			files = (
 				AF227FF4280B468B0047B31A /* HeaderBarView.swift in Sources */,
 				AF228009280B50670047B31A /* SignUpViewModel.swift in Sources */,
+				AF22800F280B55F60047B31A /* SellerAddDetailsView.swift in Sources */,
 				AF227FF2280B468B0047B31A /* RoundedShape.swift in Sources */,
 				AF227FF3280B468B0047B31A /* MenuPickerView.swift in Sources */,
 				AF227FF6280B468B0047B31A /* SelectOptionView.swift in Sources */,
 				AF227FE9280B45950047B31A /* SignInView.swift in Sources */,
+				AF22800D280B54AF0047B31A /* AddDetailsViewModel.swift in Sources */,
 				AF228001280B4DAC0047B31A /* ImageUploader.swift in Sources */,
+				AF22800B280B54A30047B31A /* AddDetailsView.swift in Sources */,
 				AF228003280B4F260047B31A /* UserHomeView.swift in Sources */,
 				AF227FA3280B29FE0047B31A /* ContentView.swift in Sources */,
 				AF227FF5280B468B0047B31A /* CustomInputtField.swift in Sources */,
@@ -394,6 +409,7 @@
 				AF228000280B4DAC0047B31A /* locationManager.swift in Sources */,
 				AF228007280B50570047B31A /* SignUpView.swift in Sources */,
 				AF227FEB280B45C10047B31A /* SignInViewModel.swift in Sources */,
+				AF228011280B56000047B31A /* SellerAddDetailsViewModel.swift in Sources */,
 				AF227FA1280B29FE0047B31A /* nibm_broker_cwApp.swift in Sources */,
 				AF227FF7280B468B0047B31A /* AddRowView.swift in Sources */,
 			);
