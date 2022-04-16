@@ -30,6 +30,10 @@
 		AF227FF9280B47600047B31A /* Launch_Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF227FF8280B47600047B31A /* Launch_Screen.storyboard */; };
 		AF227FFB280B497D0047B31A /* home.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF227FFA280B497C0047B31A /* home.jpg */; };
 		AF227FFD280B4CFA0047B31A /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF227FFC280B4CFA0047B31A /* ImagePicker.swift */; };
+		AF228000280B4DAC0047B31A /* locationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF227FFE280B4DAC0047B31A /* locationManager.swift */; };
+		AF228001280B4DAC0047B31A /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF227FFF280B4DAC0047B31A /* ImageUploader.swift */; };
+		AF228003280B4F260047B31A /* UserHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF228002280B4F260047B31A /* UserHomeView.swift */; };
+		AF228005280B4F370047B31A /* UserHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF228004280B4F360047B31A /* UserHomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +76,10 @@
 		AF227FF8280B47600047B31A /* Launch_Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch_Screen.storyboard; sourceTree = "<group>"; };
 		AF227FFA280B497C0047B31A /* home.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = home.jpg; sourceTree = "<group>"; };
 		AF227FFC280B4CFA0047B31A /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		AF227FFE280B4DAC0047B31A /* locationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = locationManager.swift; sourceTree = "<group>"; };
+		AF227FFF280B4DAC0047B31A /* ImageUploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
+		AF228002280B4F260047B31A /* UserHomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHomeView.swift; sourceTree = "<group>"; };
+		AF228004280B4F360047B31A /* UserHomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +186,7 @@
 		AF227FCB280B305D0047B31A /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				AF228004280B4F360047B31A /* UserHomeViewModel.swift */,
 				AF227FEA280B45C10047B31A /* SignInViewModel.swift */,
 			);
 			path = ViewModels;
@@ -186,6 +195,7 @@
 		AF227FCD280B30750047B31A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AF228002280B4F260047B31A /* UserHomeView.swift */,
 				AF227FE8280B45950047B31A /* SignInView.swift */,
 			);
 			path = Views;
@@ -207,6 +217,8 @@
 		AF227FCF280B30960047B31A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				AF227FFF280B4DAC0047B31A /* ImageUploader.swift */,
+				AF227FFE280B4DAC0047B31A /* locationManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -366,9 +378,13 @@
 				AF227FF3280B468B0047B31A /* MenuPickerView.swift in Sources */,
 				AF227FF6280B468B0047B31A /* SelectOptionView.swift in Sources */,
 				AF227FE9280B45950047B31A /* SignInView.swift in Sources */,
+				AF228001280B4DAC0047B31A /* ImageUploader.swift in Sources */,
+				AF228003280B4F260047B31A /* UserHomeView.swift in Sources */,
 				AF227FA3280B29FE0047B31A /* ContentView.swift in Sources */,
 				AF227FF5280B468B0047B31A /* CustomInputtField.swift in Sources */,
+				AF228005280B4F370047B31A /* UserHomeViewModel.swift in Sources */,
 				AF227FFD280B4CFA0047B31A /* ImagePicker.swift in Sources */,
+				AF228000280B4DAC0047B31A /* locationManager.swift in Sources */,
 				AF227FEB280B45C10047B31A /* SignInViewModel.swift in Sources */,
 				AF227FA1280B29FE0047B31A /* nibm_broker_cwApp.swift in Sources */,
 				AF227FF7280B468B0047B31A /* AddRowView.swift in Sources */,

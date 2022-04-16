@@ -10,7 +10,8 @@ import Firebase
 
 @main
 struct nibm_broker_cwApp: App {
-    
+    // initialized the signInViewModel in root for use it globaly
+    @StateObject var viewModel = SignInViewModel()
     init(){
         // configuer firebase just after app start
         FirebaseApp.configure()
@@ -23,8 +24,9 @@ struct nibm_broker_cwApp: App {
             // every navigation links render inside the navigation-view
             
             NavigationView{
-                ContentView()
+                UserHomeView()
             }
+            .environmentObject(viewModel)
         }
     }
 }
