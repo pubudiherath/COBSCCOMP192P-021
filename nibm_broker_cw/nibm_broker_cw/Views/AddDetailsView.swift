@@ -9,10 +9,12 @@ import SwiftUI
 
 struct AddDetailsView: View {
     
-    private var numberOfImages = 6
-    private let timer = Timer.publish(every: 3,  on: .main,in: .common).autoconnect()
+    public var numberOfImages = 6
+    public let timer = Timer.publish(every: 3,  on: .main,in: .common).autoconnect()
     
-    @State private var currentIndex = 0
+    public var sellitem : SellItem
+    
+    @State public var currentIndex = 0
     @Environment(\.presentationMode) var mode
     
     func previouse(){
@@ -105,7 +107,7 @@ struct AddDetailsView: View {
                             .font(.title2)
                             .fontWeight(.bold)
                             .padding(.leading , 10)
-                        Text("20,000,000.00")
+                        Text(sellitem.price)
                             .font(.title2)
                             .fontWeight(.bold)
                             .padding(.leading , 10)
@@ -115,7 +117,7 @@ struct AddDetailsView: View {
                             .font(.title2)
                             .fontWeight(.bold)
                             .padding(.leading , 10)
-                        Text("N/A")
+                        Text(sellitem.location)
                             .font(.title2)
                             .fontWeight(.bold)
                             .padding(.leading , 10)
@@ -125,7 +127,7 @@ struct AddDetailsView: View {
                             .font(.title2)
                             .fontWeight(.bold)
                             .padding(.leading , 10)
-                        Text("House")
+                        Text(sellitem.landOrHouse)
                             .font(.title2)
                             .fontWeight(.bold)
                             .padding(.leading , 10)
@@ -135,7 +137,7 @@ struct AddDetailsView: View {
                             .font(.title2)
                             .fontWeight(.bold)
                             .padding(.leading , 10)
-                        Text("Colombo 07")
+                        Text(sellitem.district)
                             .font(.title2)
                             .fontWeight(.bold)
                             .padding(.leading , 10)
@@ -145,7 +147,7 @@ struct AddDetailsView: View {
                             .font(.title2)
                             .fontWeight(.bold)
                             .padding(.leading , 10)
-                        Text("Town")
+                        Text(sellitem.landOrHouse)
                             .font(.title2)
                             .fontWeight(.bold)
                             .padding(.leading , 10)
@@ -159,8 +161,10 @@ struct AddDetailsView: View {
     }
 }
 
+/*
 struct AddDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        AddDetailsView()
+        AddDetailsView(sellitemId : "9055ECBF-F557-4F67-B188-7D294354E547")
     }
 }
+*/

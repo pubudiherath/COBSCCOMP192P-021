@@ -73,6 +73,8 @@ class SignInViewModel :  ObservableObject{
                     print("DEBUG: User data create successfully \n\n")
                     
                 }
+            self.fetchCurrentUser()
+            
         }
         
     }

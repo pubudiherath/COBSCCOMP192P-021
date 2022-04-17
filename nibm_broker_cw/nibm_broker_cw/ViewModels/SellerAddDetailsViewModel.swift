@@ -69,6 +69,7 @@ class SellerAddDetailViewModel :  ObservableObject{
                 print("DEBUG: advertiesment data create successfully \n\n")
                 self.uploadItemImage(imageSl,uidUP: self.uid)
             }
+        fetchAllItems()
     }
     
     func uploadItemImage(_ image : UIImage, uidUP:String){
@@ -87,6 +88,12 @@ class SellerAddDetailViewModel :  ObservableObject{
        // guard var uid = uid
         sellItemService.fetchSellItem(withUid: uid) { sellItem in
           self.currentSellItem = sellItem
+          print("DEBUG Sell Item Fetch succesfull \("")")
+       }
+    }
+    
+    func fetchAllItems(){
+        sellItemService.fetchSellItems(){ sellItem in
           print("DEBUG Sell Item Fetch succesfull \("")")
        }
     }

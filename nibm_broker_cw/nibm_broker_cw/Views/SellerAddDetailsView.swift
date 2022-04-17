@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SellerAddDetailsView: View {
+    // Properties
     @State private var price: String = ""
     @State private var landorHousee: String = ""
     @State private var district: String = ""
@@ -25,6 +26,7 @@ struct SellerAddDetailsView: View {
     @State private var itemImage : Image?
     
     @EnvironmentObject var viewModel : SignInViewModel
+    
     var sellerAddDetailViewModel = SellerAddDetailViewModel()
         
         var body: some View {
@@ -109,7 +111,11 @@ struct SellerAddDetailsView: View {
       
             Button{
                 sellerAddDetailViewModel.createAdvertiesment(price: price, landOrHouse: landorHousee, district: district, landSize: landSize, location: location, townOrVilage: townOrvillage,imageSl: selectedImage)
+               // NavigationLink{
+                 //   UserHomeView()
+                //}label:{}
                 
+                mode.wrappedValue.dismiss()
                 //sellerAddDetailViewModel.uploadItemImage(selectedImage)
             } label : {
                 Text("Add Advertiesment")

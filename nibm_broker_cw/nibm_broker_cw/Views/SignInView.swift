@@ -69,6 +69,8 @@ struct SignInView: View {
             }
             Button{
                 viewModel.login(withemail: email, password: password)
+                presentationModesn.wrappedValue.dismiss()
+                
             } label : {
                 Text("Sign In")
                     .font(.headline)
@@ -87,7 +89,7 @@ struct SignInView: View {
                 SignUpView()
             } label: {
                 HStack{
-                    Text("Dont hava an account? ")
+                    Text("Dont have an account? ")
                         .font(.footnote)
                     Text("Sign Up")
                         .font(.footnote)

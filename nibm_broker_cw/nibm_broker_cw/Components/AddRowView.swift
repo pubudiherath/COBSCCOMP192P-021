@@ -14,6 +14,7 @@ struct AddRowView: View {
     @State private var district = ""
     @State private var townOrVillage = ""
     
+    let sellItem : SellItem
     // Envirenment objects can usen in whole applicaton
     // Initialized it when app start time.
     @EnvironmentObject var viewModel : SignInViewModel
@@ -25,11 +26,13 @@ struct AddRowView: View {
     }
 }
 
+/*
 struct AddRowView_Previews: PreviewProvider {
     static var previews: some View {
-        AddRowView()
+        AddRowView(sellItem:[SellItem])
     }
 }
+ */
 
 extension AddRowView {
     var addRowMainInterfaceView : some View{
@@ -43,7 +46,7 @@ extension AddRowView {
                 // info
                 VStack{
                     HStack{
-                        Text("120000 LKR")
+                        Text(sellItem.price)
                             .font(.title3)
                             .bold()
                         
@@ -51,13 +54,13 @@ extension AddRowView {
                             .font(.title3)
                             .bold()
                         
-                        Text("House")
+                        Text(sellItem.landOrHouse)
                             .font(.title3)
                             .bold()
                     }
                     Spacer()
                     HStack{
-                        Text("Colombo")
+                        Text(sellItem.district)
                             .font(.title3)
                             .bold()
                         
@@ -65,21 +68,21 @@ extension AddRowView {
                             .font(.title3)
                             .bold()
                         
-                        Text("40 purch")
+                        Text(sellItem.landSize)
                             .font(.title3)
                             .bold()
                     }
                     Spacer()
                     HStack{
-                        Text("Town")
+                        Text(sellItem.townOrVilage)
                             .font(.title3)
                             .bold()
-                        
+                        /*
                         NavigationLink{
                             if(viewModel.userSession == nil){
                                 SignInView()
                             }else{
-                                AddDetailsView()
+                                //AddDetailsView(sellitem:sellItem)
                             }
                         } label:{
                             Text("View")
@@ -90,7 +93,7 @@ extension AddRowView {
                         .background(Color(.systemBlue))
                         .clipShape(Capsule())
                         .padding(.leading)
-                        
+                        */
                     }
                 }
                 .frame(height:100)
