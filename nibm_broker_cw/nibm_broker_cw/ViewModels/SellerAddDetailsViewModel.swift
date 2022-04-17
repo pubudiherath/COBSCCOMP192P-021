@@ -11,11 +11,16 @@ import UIKit
 class SellerAddDetailViewModel :  ObservableObject{
     
     private var locationManager : LocationManager
+    public var sellItemId : String = "30E99346-D818-425D-85BF-3452F6820FB6"
     @Published var geoLocation : String = ""
+    @Published var currentSellItem : SellItem?
     
+    
+    private let sellItemService = SellItemService()
     init(){
         locationManager = LocationManager()
         self.setGeoLocation()
+        //self.fetchSelectedSellItem(uid: sellItemId)
     }
     
        var userLatitude: String {
@@ -75,6 +80,15 @@ class SellerAddDetailViewModel :  ObservableObject{
                     //self.userSession = self.tempUserSession
                 }
         }
+    }
+    
+    func fetchSelectedSellItem(uid:String){
+        print("DEBUG Sell Item Fetch id \(uid)")
+       // guard var uid = uid
+        sellItemService.fetchSellItem(withUid: uid) { sellItem in
+          self.currentSellItem = sellItem
+          print("DEBUG Sell Item Fetch succesfull \("")")
+       }
     }
 }
 

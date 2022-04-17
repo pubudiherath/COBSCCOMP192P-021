@@ -42,6 +42,11 @@
 		AF228011280B56000047B31A /* SellerAddDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF228010280B56000047B31A /* SellerAddDetailsViewModel.swift */; };
 		AF228013280B5A440047B31A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF228012280B5A440047B31A /* SettingsView.swift */; };
 		AF228015280B5A4F0047B31A /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF228014280B5A4F0047B31A /* SettingsViewModel.swift */; };
+		AF2B019D280C321A00803CA5 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2B019C280C321A00803CA5 /* UserService.swift */; };
+		AF2B019F280C39CA00803CA5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2B019E280C39CA00803CA5 /* User.swift */; };
+		AF2B01A1280C4F4500803CA5 /* SellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2B01A0280C4F4500803CA5 /* SellItem.swift */; };
+		AF2B01A3280C4FE200803CA5 /* SellItemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2B01A2280C4FE200803CA5 /* SellItemService.swift */; };
+		AF2D4F2D280BF0B80083723D /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2D4F2C280BF0B80083723D /* ResetPasswordView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +101,11 @@
 		AF228010280B56000047B31A /* SellerAddDetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellerAddDetailsViewModel.swift; sourceTree = "<group>"; };
 		AF228012280B5A440047B31A /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		AF228014280B5A4F0047B31A /* SettingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		AF2B019C280C321A00803CA5 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		AF2B019E280C39CA00803CA5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AF2B01A0280C4F4500803CA5 /* SellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellItem.swift; sourceTree = "<group>"; };
+		AF2B01A2280C4FE200803CA5 /* SellItemService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellItemService.swift; sourceTree = "<group>"; };
+		AF2D4F2C280BF0B80083723D /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +205,8 @@
 		AF227FCA280B30510047B31A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AF2B019E280C39CA00803CA5 /* User.swift */,
+				AF2B01A0280C4F4500803CA5 /* SellItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -221,6 +233,7 @@
 				AF228006280B50570047B31A /* SignUpView.swift */,
 				AF228002280B4F260047B31A /* UserHomeView.swift */,
 				AF227FE8280B45950047B31A /* SignInView.swift */,
+				AF2D4F2C280BF0B80083723D /* ResetPasswordView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -243,6 +256,8 @@
 			children = (
 				AF227FFF280B4DAC0047B31A /* ImageUploader.swift */,
 				AF227FFE280B4DAC0047B31A /* locationManager.swift */,
+				AF2B019C280C321A00803CA5 /* UserService.swift */,
+				AF2B01A2280C4FE200803CA5 /* SellItemService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -397,9 +412,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF2B019F280C39CA00803CA5 /* User.swift in Sources */,
 				AF227FF4280B468B0047B31A /* HeaderBarView.swift in Sources */,
+				AF2B019D280C321A00803CA5 /* UserService.swift in Sources */,
 				AF228015280B5A4F0047B31A /* SettingsViewModel.swift in Sources */,
+				AF2B01A3280C4FE200803CA5 /* SellItemService.swift in Sources */,
 				AF228009280B50670047B31A /* SignUpViewModel.swift in Sources */,
+				AF2D4F2D280BF0B80083723D /* ResetPasswordView.swift in Sources */,
 				AF22800F280B55F60047B31A /* SellerAddDetailsView.swift in Sources */,
 				AF227FF2280B468B0047B31A /* RoundedShape.swift in Sources */,
 				AF227FF3280B468B0047B31A /* MenuPickerView.swift in Sources */,
@@ -417,6 +436,7 @@
 				AF228007280B50570047B31A /* SignUpView.swift in Sources */,
 				AF227FEB280B45C10047B31A /* SignInViewModel.swift in Sources */,
 				AF228011280B56000047B31A /* SellerAddDetailsViewModel.swift in Sources */,
+				AF2B01A1280C4F4500803CA5 /* SellItem.swift in Sources */,
 				AF227FA1280B29FE0047B31A /* nibm_broker_cwApp.swift in Sources */,
 				AF227FF7280B468B0047B31A /* AddRowView.swift in Sources */,
 				AF228013280B5A440047B31A /* SettingsView.swift in Sources */,

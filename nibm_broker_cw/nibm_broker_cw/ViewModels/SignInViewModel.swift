@@ -11,11 +11,15 @@ import Firebase
 class SignInViewModel :  ObservableObject{
     // any view that use SignInViewModel can access this userSession because it is set as @Published
     @Published var userSession : Firebase.User?
+    @Published var currentUser : User? // this is optional because the time of SignInViewModel is created the fetch user function not going to be run
     private var tempUserSession : Firebase.User?
+    
+    private let userService = UserService()
     
     init(){
         self.userSession = Auth.auth().currentUser
         print("DEBUG: User session is \(self.userSession?.uid) \n\n")
+        self.fetchCurrentUser()
     }
     
     func login(withemail email: String, password : String){
@@ -26,7 +30,7 @@ class SignInViewModel :  ObservableObject{
             }
             guard let user = result?.user else {return}
             self.userSession = user
-            
+            self.fetchCurrentUser()
             print("DEBUG: User signin successfully \n\n")
         }
     }
@@ -72,9 +76,44 @@ class SignInViewModel :  ObservableObject{
         }
         
     }
+    
+    func updateUser(withemail email:String, username : String,
+                  gender : String , birthDate : String, name : String , mobile : String, location : String
+    ){
+        let data = ["email" : email,
+                    "username" : username.lowercased(),
+                    "gender" : gender,
+                    "birthDate" : birthDate,
+                    "name" : name,
+                    "mobile" : mobile,
+                    "location" : location]
+        Firestore.firestore().collection("users")
+            .document(self.userSession!.uid)
+            .updateData(data) { _ in
+                print("DEBUG: User data Update successfully \("")\n\n")
+                self.userSession = self.tempUserSession
+                self.fetchCurrentUser()
+            }
+        }
+    
+    
+    
     func signOut(){
         self.userSession = nil
         try? Auth.auth().signOut()
+    }
+    
+    func resetPassword(email: String , resetCompletion: @escaping (Result<Bool,Error>) ->  Void){
+        Auth.auth().sendPasswordReset(withEmail: email) { (error) in
+            print("DEBUG : resetPassword hits")
+            if let error = error {
+                print("DEBUG : Reset password error \(error) ")
+                resetCompletion(.failure(error))
+            }else{
+                print("DEBUG : Reset password success ")
+                resetCompletion(.success(true))
+            }
+        }
     }
     
     func uploadProfileImage(_ image : UIImage){
@@ -85,6 +124,14 @@ class SignInViewModel :  ObservableObject{
                 .updateData(["ProfileImageURL" : profileImageURL]) { _ in
                     self.userSession = self.tempUserSession
                 }
+        }
+    }
+    
+    func fetchCurrentUser(){
+         
+        guard let uid = self.userSession?.uid else{return}
+        userService.fetchUser(withUid: uid) { user in
+            self.currentUser = user
         }
     }
 }

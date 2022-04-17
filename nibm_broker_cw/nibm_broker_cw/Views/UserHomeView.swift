@@ -11,6 +11,8 @@ struct UserHomeView: View {
     private var district = ["Colombo","Kurunegala","Kandy","Galle"]
     private var itemType = ["House", "Land"]
     
+    @ObservedObject var userhomeViewModel  = UserHomeViewModel()
+    
     var body: some View {
         VStack{
             HeaderBarView()

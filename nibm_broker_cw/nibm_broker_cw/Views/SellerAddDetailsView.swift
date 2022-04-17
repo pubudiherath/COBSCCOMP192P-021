@@ -25,10 +25,10 @@ struct SellerAddDetailsView: View {
     @State private var itemImage : Image?
     
     @EnvironmentObject var viewModel : SignInViewModel
-    
     var sellerAddDetailViewModel = SellerAddDetailViewModel()
+        
+        var body: some View {
     
-    var body: some View {
         VStack{
             
             // Header View

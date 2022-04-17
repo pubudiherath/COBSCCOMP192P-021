@@ -1,5 +1,5 @@
 //
-//  SignInView.swift
+//  ResetPasswordView.swift
 //  nibm_broker_cw
 //
 //  Created by pubudiHerath on 4/17/22.
@@ -7,11 +7,10 @@
 
 import SwiftUI
 
-struct SignInView: View {
-    
+struct ResetPasswordView: View {
     @State private var email = ""
-    @State private var password = ""
-    
+    @State private var errorString :String?
+    @State private var showAlert : Bool = false
     @Environment(\.presentationMode) var presentationModesn
     @EnvironmentObject var viewModel : SignInViewModel
     
@@ -23,7 +22,7 @@ struct SignInView: View {
                 HStack{Spacer()}
                 
                 Button{
-                    presentationModesn.wrappedValue.dismiss()
+                    self.presentationModesn.wrappedValue.dismiss()
                     
                 }label:{
                     Image(systemName: "arrow.left")
@@ -32,11 +31,11 @@ struct SignInView: View {
                         .foregroundColor(.white)
                         .offset(x: 1, y: 12)
                 }
-                Text("Hello")
-                    .font(.largeTitle)
-                    .fontWeight(.semibold)
+                //Text("Hello")
+                  //  .font(.largeTitle)
+                   // .fontWeight(.semibold)
                 
-                Text("Wlcome Back")
+                Text("Reset Password")
                     .font(.largeTitle)
                     .fontWeight(.semibold)
             }
@@ -48,29 +47,30 @@ struct SignInView: View {
             VStack(spacing : 40){
                 CustomInputtField(imageName: "envelope", placeHolderText: "Email", text: $email)
                 
-                CustomInputtField(imageName: "lock", placeHolderText: "Password", isSecureField: true,  text: $password)
             }
             .padding(.horizontal,32)
             .padding(.top,44)
             
             HStack{
                 Spacer()
-                NavigationLink{
-                    ResetPasswordView()
-                    
-                } label : {
-                    Text("Forget Password?")
-                        .font(.caption)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color(.systemBlue))
-                        .padding(.top)
-                        .padding(.trailing, 24)
-                }
+                
+                
+                
             }
             Button{
-                viewModel.login(withemail: email, password: password)
+                viewModel.resetPassword(email: email){ (result) in
+                    switch result {
+                    case .failure(let error) :
+                        self.errorString = error.localizedDescription
+                        print("DEBUG : Reset password error \(error) ")
+                    case .success( _):
+                        print("DEBUG : Reset password succesfull ")
+                        break
+                    }
+                    self.showAlert = true
+                }
             } label : {
-                Text("Sign In")
+                Text("Reset Password")
                     .font(.headline)
                     .foregroundColor(.white)
                     .frame(width: 340, height: 50)
@@ -87,24 +87,28 @@ struct SignInView: View {
                 SignUpView()
             } label: {
                 HStack{
-                    Text("Dont hava an account? ")
+                    Text("Dont have an account? ")
                         .font(.footnote)
                     Text("Sign Up")
                         .font(.footnote)
                         .fontWeight(.semibold)
                 }
             }
-            .padding(.bottom,50)
+            .padding(.bottom,70)
             .foregroundColor(Color(.systemBlue))
         }
         .ignoresSafeArea()
         .navigationBarHidden(true)
+        .alert(isPresented: $showAlert){
+            Alert(title: Text("Password Reset"),
+                  message: Text(self.errorString ?? "Password Reset Successfully! Check your email.."), dismissButton: .default(Text("OK")){
+                self.presentationModesn.wrappedValue.dismiss()
+            })
+        }
     }
 }
-
-struct SignInView_Previews: PreviewProvider {
+struct ResetPasswordView_Previews: PreviewProvider {
     static var previews: some View {
-        SignInView()
-            .previewDevice("iPhone 11")
+        ResetPasswordView()
     }
 }
